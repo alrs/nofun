@@ -23,7 +23,8 @@ import (
 
 func main() {
 	// https://superuser.com/questions/380772/removing-ansi-color-codes-from-text-stream
-	rxp := regexp.MustCompile(`\x1b\[[0-9;]*[a-zA-Z]`)
+	// https://stackoverflow.com/questions/14693701/how-can-i-remove-the-ansi-escape-sequences-from-a-string-in-python
+	rxp := regexp.MustCompile(`\x1B\[[0-Z;]*[a-zA-Z]`)
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		if err := scanner.Err(); err != nil {
