@@ -11,11 +11,11 @@ operating systems don't have GNU sed.
 
 installation
 ------------
-go install .
+go install ./...
 
 example
 -------
-neofetch | nofun
+neofetch | nf
 
 license
 -------
