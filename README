@@ -3,7 +3,7 @@ nofun
 nofun is a traditional UNIX filter that strips escape sequences from input on 
 stdin before sending to stdout.
 
-nofun rids you of colors, spinners, and their associated ESC trash.
+nofun rids you of colors, spinners, and their associated ESC trash!
 
 One could do this with GNU sed, but developers working in proprietary
 operating systems don't have GNU sed.
