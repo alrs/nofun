@@ -27,11 +27,11 @@ func main() {
 	rxp := regexp.MustCompile(`\x1B\[[0-Z;]*[a-zA-Z]`)
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
-		if err := scanner.Err(); err != nil {
-			panic(err)
-		}
 		input := scanner.Bytes()
 		os.Stdout.Write(rxp.ReplaceAll(input, []byte{}))
 		fmt.Print("\n")
+	}
+	if err := scanner.Err(); err != nil {
+		panic(err)
 	}
 }
